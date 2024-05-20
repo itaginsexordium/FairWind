@@ -1,0 +1,96 @@
+name: fairwind
+description: Let's hit the huckster together
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 0.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI
+  flutter_svg: 2.0.7
+  google_fonts: 5.1.0
+
+  # BloC
+  flutter_bloc: 8.1.3
+  bloc_concurrency: 0.2.2
+
+  # Storage
+  shared_preferences: 2.2.0
+
+  # DI
+  provider: 6.0.5
+
+  # Dev
+  l: 4.0.2
+  logger: ^2.0.0
+
+  # Navigation
+  auto_route: 7.8.0
+  # TODO: не уверен насчет этого пакета, но он удаляет # из пути
+  url_strategy: 0.2.0
+
+  # Intl and localization
+  flutter_localizations:
+    sdk: flutter
+  intl: 0.18.0
+  intl_utils: 2.8.3
+
+  # TODO: удалить если не используется
+  cupertino_icons: ^1.0.2
+
+  # Code generation
+  freezed_annotation: 2.4.1
+  json_annotation: 4.8.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+  # Code generation
+  build_runner: 2.4.6
+  freezed: 2.4.1
+  json_serializable: 6.7.1
+  auto_route_generator: 7.3.0
+  flutter_gen_runner: 5.3.1
+
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - "assets/"
+    - "assets/logo/"
+    - "assets/left_menu/"
+    - "assets/app_bar/"
+    - "assets/main_page/"
+
+
+# Flutter_gen settings
+flutter_gen:
+  output: lib/src/common/assets/gen
+  line_length: 120
+  integrations:
+    flutter_svg: true
+  assets:
+    enabled: true
+    fonts:
+      enabled: true
+    output:
+      style: dot-delimiter
+      package_parameter_enabled: false
+
+
+# Intl settings
+flutter_intl:
+  enabled: true
+  class_name: GeneratedLocalization
+  main_locale: en
+  arb_dir: lib/src/common/utils/localization
+  output_dir: lib/src/common/utils/localization/generated
+  use_deferred_loading: false

@@ -1,0 +1,1 @@
+export 'mixin/base_repository_mixin.dart';
